@@ -8,12 +8,18 @@ class Recipe extends Component {
             ));
         return (
             <div>
-            <div>Recipe {title}</div>
-            <ul>
-                {ingredients}
-            </ul>
-            <p>{instructions} </p>
+            <div>
             <img src={img} alt={title} />
+            </div>
+            <div>
+                <h3>Recipe {title}<h3>
+                <h4>Ingredients:</h4>
+                    <ul>
+                        {ingredients}
+                    </ul>
+                <h4>Instructions:</h4>
+                <p>{instructions} </p>
+                </div>
             </div>
             );
     }
