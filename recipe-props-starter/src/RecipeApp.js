@@ -7,6 +7,7 @@ class RecipeApp extends Component {
   render() {
     return (
       <div className="App">
+      <Navbar />
         <Recipe 
         title="pasta " 
         ingredients={['flour', 'water']}
