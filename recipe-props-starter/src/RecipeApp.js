@@ -33,16 +33,23 @@ class RecipeApp extends Component {
         ],
         nextRecipeId: 3,
     }
+    this.handleSave = this.handleSave.bind(this);
   }
   
   handleSave(recipe) {
-    
+    this.setState((prevState, props) => {
+      const newRecipe = {...recipe, id: this.state.nextRecipeId};
+      return {
+        nextRecipeId: prevState.nextRecipeId + 1,
+        recipes: [... this.state.recipes, newRecipe]
+      }
+    });
   }
   render() {
     return (
       <div className="App">
         <Navbar />
-        <RecipeInput />
+        <RecipeInput onSave={this.handleSave} />
         <RecipeList recipes= {this.state.recipes} />
       </div>
     );
