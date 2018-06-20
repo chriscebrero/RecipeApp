@@ -7,7 +7,7 @@ class RecipeApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipe: [
+      recipes: [
         {   
             id: 1,
             title: "Cheesy Potatos",
@@ -30,6 +30,7 @@ class RecipeApp extends Component {
             img: "Pizza.jpg"
         }
         ],
+        nextRecipeId: 3,
     }
   }
   render() {
