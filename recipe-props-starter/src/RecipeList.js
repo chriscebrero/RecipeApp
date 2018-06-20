@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Recipe from './Recipe';
-import 'RecipeList.css';
+import './RecipeList.css';
 import PropTypes from 'prop-types';
 
 class RecipeList extends Component {
@@ -33,9 +33,9 @@ class RecipeList extends Component {
     }
     
     render() {
-        const recipes = this.prop.recipes.map((r, index) => (
-        <Recipe key={index} {...r} />
-        ));
+    const recipes = this.props.recipes.map((r,index) => (
+      <Recipe key={index} {...r} />
+    ));
         
         return (
             <div className="recipe-list">
