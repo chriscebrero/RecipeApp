@@ -31,8 +31,16 @@ class RecipeList extends Component {
     static propTypes = {
         recipes: PropTypes.arrayOf(PropTypes.object)
     }
+    
     render() {
+        const recipes = this.prop.recipes.map((r, index) => (
+        <Recipe key={index} {...r} />
+        ));
         
+        return (
+            <div className="recipe-list">
+            {recipes}
+            </div>)
     }
 }
 
