@@ -8,6 +8,8 @@ class Recipe extends Component {
     ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
     instructions: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    onDelete: PropTypes.func.isRequired
   }
   
   render() {
@@ -28,6 +30,7 @@ class Recipe extends Component {
           </ul>
           <h4>Instructions:</h4>
           <p>{instructions}</p>
+          <button type="button">DELETE</button>
         </div>
         
       </div>
