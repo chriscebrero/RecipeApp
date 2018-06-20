@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
 import './Navbar.css';
+import PropTypes from 'prop-types';
 
 class Navbar extends Component {
+  defaultProps = {
+    onNewRecipe() {}
+  }
+  
+  static propTypes = {
+    onNewRecipe: PropTypes.func
+  }
   render() {
     return (
       <header>
