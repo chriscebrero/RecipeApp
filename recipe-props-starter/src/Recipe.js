@@ -13,7 +13,7 @@ class Recipe extends Component {
   }
   
   render() {
-    const {title, img, instructions} = this.props;
+    const {title, img, instructions, id, onDelete} = this.props;
     const ingredients = this.props.ingredients.map((ing, index) => (
       <li key={index}>{ing}</li> 
     ));
@@ -30,7 +30,7 @@ class Recipe extends Component {
           </ul>
           <h4>Instructions:</h4>
           <p>{instructions}</p>
-          <button type="button">DELETE</button>
+          <button type="button" onClick={() => onDelete(id)}>DELETE</button>
         </div>
         
       </div>
